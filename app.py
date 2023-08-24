@@ -5,6 +5,9 @@ import re
 from tensorflow.keras.models import load_model
 from tensorflow.keras.preprocessing.sequence import pad_sequences
 
+import tensorflow as tf
+
+
 app = Flask(__name__)
 
 # Load the trained LSTM model
