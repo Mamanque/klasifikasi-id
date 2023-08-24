@@ -1,5 +1,4 @@
 ﻿Flask==2.3.2
 gunicorn==20.1.0
 numpy==1.23.5
-virtualenv==20.23.1
-tensorflow==2.5.0
+tensorflow==2.13.0
