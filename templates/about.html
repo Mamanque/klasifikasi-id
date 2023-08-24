@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>About</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding-top: 50px;
+        }
+
+        .mt-5 {
+            text-align: center;
+            font-size: 28px;
+            font-weight: bold;
+            margin-bottom: 30px;
+            color: #343a40;
+        }
+
+        .logo {
+            text-align: center;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+            <div class="logo">
+                <img src="{{ url_for('static', filename='gundar.png') }}" alt="Logo" width="200">
+            </div>
+        <h1 class="mt-5 text-center">About</h1>
+        <p class="text-center">DANI ISMAIL 11119558  <br> Aplikasi ini dibuat untuk melakukan klasifikasi teks berita menggunakan metode Long - Short Term Memory </p>
+        
+        <!-- Back Button -->
+        <div class="text-center mt-4">
+        <a href="javascript:history.back()" class="btn btn-secondary">Kembali</a>
+        </div>
+    </div>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

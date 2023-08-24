@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Klasifikasi Teks Hoax</title>
+    <link rel="shortcut icon" href="{{ url_for('static', filename='faviconX.ico') }}" type="image/gif"> 
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='stylesheet/style.css') }}" />
+</head>
+<body>
+    <div class="bg-image">
+        <div class="container">
+            <h1 class="mt-5 text-center">IMPLEMENTASI ALGORITMA LONG SHORT-TERM MEMORY (LSTM) DALAM KLASIFIKASI BERITA HOAX </h1>  <!-- JURNAL : APLIKASI KLASIFIKASI HOAX BERBAHASA INDONESIA MENGGUNAKAN LONG SHORT-TERM MEMORY (LSTM)-->
+            <div class="mt-4 text-center">
+                <a href="/about" class="btn btn-outline-dark">About</a>
+            </div>
+            <form method="post" action="/">
+                <div class="form-group">
+                    <label for="text">Input Teks :</label>
+                    <textarea class="form-control" id="text" name="text" placeholder="Masukan Teks" rows="3" required>{{ text }}</textarea>
+                </div>
+                <div class="col text-center">
+                <button type="submit" class="btn btn-primary btn-lg">Prediksi</button> <!--Jaya Jaya Jaya -->
+                </div>
+            </form>
+            {% if prediction %}
+                <div class="result-section {% if prediction == 'Berita Real' %}result-real{% else %}result-hoax{% endif %}">
+                    <h6>Hasil :</h6>
+                    <h5>Prediksi : {{ prediction }}</h5>
+                    <p>Skor: {{ skor }}</p>
+                </div>
+            {% endif %}
+        </div>
+    </div>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
